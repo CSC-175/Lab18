@@ -4,7 +4,14 @@
 The exchange sort is a simple algorithm that can be implemented to iterate through all unique pairs of array indexes and exchange the values in those position if the value 
 in the first index (alpha) is less than the second index (beta) until all elements are sorted in descending order.
 
+<img src="Sort.gif" alt="Exchange Sort" width="550">
 
+### Exchange Sort Algorithm:
+<pre>Set ALPHA to point at first element
+Set BETA to point at next element
+If ALPHA element is less than BETA element swap BETA element and ALPHA element
+If there is an element following BETA set BETA to point at it and go to step 3; else continue
+If there is an element following ALPHA set ALPHA to point at it and set BETA to point at next element then go to step 3; else stop</pre>
 
 ## Directions
 Complete the given template file <b>lab17.cpp</b> by defining a function named <b>findHigh</b> that is designed to accept an array reference pointer, 
