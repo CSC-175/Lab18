@@ -14,10 +14,9 @@ If there is an element following BETA set BETA to point at it and go to step 3; 
 If there is an element following ALPHA set ALPHA to point at it and set BETA to point at next element then go to step 3; else stop</pre>
 
 ## Directions
-Complete the given template file <b>lab17.cpp</b> by defining a function named <b>findHigh</b> that is designed to accept an array reference pointer, 
-value paramter for the size, reference parameter to store the index, and a reference parameter to store the high value. The function must search through the array that is
-passed to find the largest value and it's index position and return them to the calling function to be printed. Note: You will need to use function overloading with function 
-signatures to handle char arrays, string arrays, integer arrays, and double arrays. 
+Complete the given template file <b>lab18.cpp</b> by defining the following functions. A function named <b>printArray</b> that is designed to accept an array reference pointer, 
+and value paramter for the size and print the array passed to the function. A second function named <b>sortDn</b> that is designed to accept an array reference pointer, 
+and value paramter for the size and then implements the Exchange Sort algorithm to sort the array in descending order.  Note: You will need to create a template function to handle char arrays, string arrays, integer arrays, and double arrays. 
 
 ## Example Arrays to be Processed
 <pre>double fpData[] = {76.25, 85.45, -45.90, 99.34,-44.12, 45.75, 57.77, 108.45, 65.64, 77.21, -24, 62};
