@@ -19,7 +19,7 @@ and value paramter for the size and print the array passed to the function. A se
 and value paramter for the size and then implements the Exchange Sort algorithm to sort the array in descending order.  Note: You will need to create a template function to handle char arrays, string arrays, integer arrays, and double arrays. 
 
 ## Example Arrays to be Processed
-<pre>int setA[] = {35, 45, 55, 20, 30, 50};
+<pre>int setA[] = {10, 40, 20, 15, 35, 30};
 double setB[] = {76.25, 85.45, -45.90, 99.34,-44.12, 45.75, 57.77, 108.45, 65.64, 77.21, -24, 62};
 string setC[] = {"Apple", "apple1", "apple10", "apples", "apple", "1apple"};
 char setD[] = {'e', 'a', '3', 'K', 'z', '*', ';', 'Z' };</pre>
