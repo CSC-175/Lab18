@@ -19,18 +19,25 @@ and value paramter for the size and print the array passed to the function. A se
 and value paramter for the size and then implements the Exchange Sort algorithm to sort the array in descending order.  Note: You will need to create a template function to handle char arrays, string arrays, integer arrays, and double arrays. 
 
 ## Example Arrays to be Processed
-<pre>double fpData[] = {76.25, 85.45, -45.90, 99.34,-44.12, 45.75, 57.77, 108.45, 65.64, 77.21, -24, 62};
-int intData[] = {35, 45, 55, 20, 30, 50};
-string stringData[] = {"Apple", "apple1", "apple10", "apples", "apple", "1apple"};
-char charData[] = {'e', 'a', '3', 'K', 'z', '*', ';', 'Z' };</pre>
+<pre>int setA[] = {35, 45, 55, 20, 30, 50};
+double setB[] = {76.25, 85.45, -45.90, 99.34,-44.12, 45.75, 57.77, 108.45, 65.64, 77.21, -24, 62};
+string setC[] = {"Apple", "apple1", "apple10", "apples", "apple", "1apple"};
+char setD[] = {'e', 'a', '3', 'K', 'z', '*', ';', 'Z' };</pre>
 
 ## Interface Prototype Example
 
 ### Test Case Output
-<pre><b>The highest value is at index 7 and is 108.45
-The highest value is at index 2 and is 55
-The highest value is at index 3 and is apples
-The highest value is at index 4 and is z</b></pre>
+<pre><b>Set A original order: 10 40 20 15 35 30 
+Descending order: 40 35 30 20 15 10 
+
+Set B original order: 76.25 85.45 -45.9 99.34 -44.12 45.75 57.77 108.45 65.64 77.21 -24 62 
+Descending order: 108.45 99.34 85.45 77.21 76.25 65.64 62 57.77 45.75 -24 -44.12 -45.9 
+
+Set C original order: Apple apple1 apple10 apples apple 1apple 
+Descending order: apples apple10 apple1 apple Apple 1apple 
+
+Set D original order: e a 3 K z * ; Z 
+Descending order: z e a Z K ; 3 *</b></pre>
 
 
 
