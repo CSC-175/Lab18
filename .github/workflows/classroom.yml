@@ -1,0 +1,60 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Test 1
+      id: test-1
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test 1
+        setup-command: g++ ./Tests/test1.cpp -o ./test1
+        command: "./test1"
+        input: ''
+        expected-output: 'Descending order: 90 85 65 55 50 50 45 35 20'
+        comparison-method: contains
+        timeout: 1
+        max-score: 5
+    - name: Test 2
+      id: test-2
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test 2
+        setup-command: g++ ./Tests/test2.cpp -o ./test2
+        command: "./test2"
+        input: ''
+        expected-output: 'Descending order: apricot apples apple10 apple1 Apple 1apple '
+        comparison-method: contains
+        timeout: 1
+        max-score: 5
+    - name: Test 3
+      id: test-3
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test 3
+        setup-command: g++ ./Tests/test3.cpp -o ./test3
+        command: "./test3"
+        input: ''
+        expected-output: 'Descending order: 299.77 199.34 88.5 88.45 77.21 72.2 66.33
+          65.64 45.75 6.62 -24 -44.12 -65.9 '
+        comparison-method: contains
+        timeout: 1
+        max-score: 5
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST-1_RESULTS: "${{steps.test-1.outputs.result}}"
+        TEST-2_RESULTS: "${{steps.test-2.outputs.result}}"
+        TEST-3_RESULTS: "${{steps.test-3.outputs.result}}"
+      with:
+        runners: test-1,test-2,test-3
